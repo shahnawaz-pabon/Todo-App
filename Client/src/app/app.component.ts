@@ -10,7 +10,7 @@ import { ListPage } from '../pages/list/list';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild('myNav') nav: Nav;
 
   rootPage: any = HomePage;
   activePage: any;
@@ -25,6 +25,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage }
     ];
+
+    this.activePage = this.pages[0];
 
   }
 
@@ -41,6 +43,7 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    this.activePage = page;
   }
 
   checkActive(page){ // check which page is active and highlight it
