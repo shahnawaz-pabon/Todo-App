@@ -3,14 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Todo App</ion-title>
+    <ion-title style="font-weight: bold;">Todo App</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
   <ion-fab bottom right>
-    <button ion-fab menuToggle color="darkblue"><ion-icon style="font-weight: bold;" name="add"></ion-icon></button>
+    <button ion-fab menuToggle color="darkblue" (click)="openTaskModal()">
+      <ion-icon style="font-weight: bold;" name="add"></ion-icon>
+    </button>
     <!-- <ion-fab-list side="top">
       <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
       <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
