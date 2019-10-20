@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 
-import { TaskPage } from '../task/task';
+// import { TaskPage } from '../task/task';
 
 @Component({
   selector: 'page-home',
@@ -15,10 +15,12 @@ export class HomePage {
 
   openTaskModal(){
 
-    const myModal = this.modal.create('TaskPage');
+    const myModal = this.modal.create('TaskPage', null, {
+      cssClass: 'myModal-class'
+    });
 
     myModal.present();
-    
+
   }
 
 }
