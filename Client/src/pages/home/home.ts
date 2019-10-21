@@ -15,7 +15,7 @@ export class HomePage {
 
   openTaskModal(){
 
-    const myModal = this.modal.create('TaskPage', null, {
+    const myModal = this.modal.create('TaskPage', {}, {
       cssClass: 'myModal-class'
     });
 
