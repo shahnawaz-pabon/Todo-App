@@ -10,13 +10,12 @@
   </ion-navbar>
 </ion-header> -->
 
-<ion-content padding>
+<ion-content padding class="main-view">
 
   <!-- <div class="rectangle">
     <div class="circle"></div>
   </div> -->
   <!-- Modal Structure -->
-  <div id="modal1" class="modal bottom-sheet">
 
     <div class="overlay" (click)="closeTask()"></div>
 
@@ -24,38 +23,41 @@
       <ion-icon style="font-weight: bold;" name="md-checkmark"></ion-icon>
     </button>
 
-    <div class="modal-content">
-      <div class="row">
-        <div class="input-field col s3">
-          <i class="material-icons prefix"><i class="fa fa-bookmark" aria-hidden="true"></i></i>
-          <input  id="name_todo" type="text" class="validate">
-          <label class="active">New record</label>
+    <div class="modal_content">
+
+      <div class="modal-content">
+        <div class="row">
+          <div class="input-field col s3">
+            <i class="material-icons prefix"><i class="fa fa-bookmark" aria-hidden="true"></i></i>
+            <input  id="name_todo" type="text" class="validate">
+            <label class="active">New record</label>
+          </div>
+
+          <div class="input-field col s5">
+                <i class="material-icons prefix"><i class="fa fa-pencil" aria-hidden="true"></i></i>
+                <textarea id="text_todo" class="materialize-textarea"></textarea>
+                <label>Description</label>
+              </div>
+
+          <div class="input-field col s2">
+          <label class="active">Date</label>
+          <input type="text" class="datepicker">
+          </div>
+
+          <div class="input-field col s1">
+          <label class="active" >Time</label>
+            <input type="text" class="timepicker">
+          </div>
+
+          <div class="input-field col s1 center">
+            <a href="#!" class="modal-action modal-close btn-floating btn-large waves-effect waves-light ">
+              <i class="fa fa-file" ></i></a>
+          </div>
+
         </div>
-
-        <div class="input-field col s5">
-              <i class="material-icons prefix"><i class="fa fa-pencil" aria-hidden="true"></i></i>
-              <textarea id="text_todo" class="materialize-textarea"></textarea>
-              <label>Description</label>
-            </div>
-
-        <div class="input-field col s2">
-        <label class="active">Date</label>
-        <input type="text" class="datepicker">
-        </div>
-
-        <div class="input-field col s1">
-        <label class="active" >Time</label>
-          <input type="text" class="timepicker">
-        </div>
-
-        <div class="input-field col s1 center">
-          <a href="#!" class="modal-action modal-close btn-floating btn-large waves-effect waves-light ">
-            <i class="fa fa-file" ></i></a>
-        </div>
-
       </div>
-    </div>
 
-  </div>
+
+    </div>
 
 </ion-content>
