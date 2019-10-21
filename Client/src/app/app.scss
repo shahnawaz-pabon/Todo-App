@@ -51,4 +51,9 @@ ion-modal {
     bottom: 0;
     top: auto;
   }
+
+  ion-backdrop {
+      visibility: hidden;
+  }
+
 }

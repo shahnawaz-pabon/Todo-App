@@ -12,13 +12,18 @@
 
 <ion-content padding>
 
-  <button ion-button class="round-button" color="secondary" (click)="closeTask()">
-    <ion-icon style="font-weight: bold;" name="md-checkmark"></ion-icon>
-  </button>
-
-
+  <!-- <div class="rectangle">
+    <div class="circle"></div>
+  </div> -->
   <!-- Modal Structure -->
   <div id="modal1" class="modal bottom-sheet">
+
+    <div class="overlay" (click)="closeTask()"></div>
+
+    <button ion-button class="round-button" color="secondary" (click)="closeTask()">
+      <ion-icon style="font-weight: bold;" name="md-checkmark"></ion-icon>
+    </button>
+
     <div class="modal-content">
       <div class="row">
         <div class="input-field col s3">
