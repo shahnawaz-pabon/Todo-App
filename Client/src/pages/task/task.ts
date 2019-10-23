@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class TaskPage {
 
+  @ViewChild('todoDes') todoDes: ElementRef;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
@@ -25,7 +27,11 @@ export class TaskPage {
   closeTask(){
 
     this.viewCtrl.dismiss();
-    
+
+  }
+
+  resize() {
+      this.todoDes.nativeElement.style.height = this.todoDes.nativeElement.scrollHeight + 'px';
   }
 
 
