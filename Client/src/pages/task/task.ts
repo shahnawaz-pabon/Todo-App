@@ -24,7 +24,10 @@ export class TaskPage {
     console.log('ionViewDidLoad TaskPage');
   }
 
-  closeTask(){
+  closeTask(todoTitle, todoDescription){
+
+    console.log(todoTitle);
+    console.log(todoDescription);
 
     this.viewCtrl.dismiss();
 

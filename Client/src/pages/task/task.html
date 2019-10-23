@@ -4,20 +4,18 @@
   <div class="overlay" (click)="closeTask()"></div>
   <div class="modal_content">
     <!-- <div class="circle"></div> -->
-    <button ion-button class="circle" color="#2c3e50" (click)="closeTask()">
+    <button ion-button class="circle" color="#2c3e50" (click)="closeTask(todoTitle, todoDescription)">
       <ion-icon style="font-weight: bold;" name="md-checkmark"></ion-icon>
     </button>
       <div class="modal-content">
-        <div class="row">
-          <div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox">
-          </div>
-
-          <div>
-            <textarea #todoDes id="todoDes" placeholder="Enter description here..." rows="1" maxLength="500" (keyup)="resize()" [(ngModel)]="todoDescription"></textarea>
-          </div>
-
+        <div>
+          <ion-input type="text" placeholder="Task Title" id="task-title" [(ngModel)]="todoTitle"></ion-input>
         </div>
+
+        <div>
+          <ion-textarea #todoDes id="todoDes" placeholder="Enter description here..." rows="2" maxLength="500" (keyup)="resize()" [(ngModel)]="todoDescription"></ion-textarea>
+        </div>
+
       </div>
 
   </div>
