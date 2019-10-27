@@ -15,7 +15,9 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class TaskPage {
 
-  @ViewChild('todoDes') todoDes: ElementRef;
+  @ViewChild('todoDes', { read: ElementRef }) todoDes:ElementRef;
+
+  // @ViewChild('todoDes') todoDes: ElementRef;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
