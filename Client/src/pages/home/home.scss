@@ -4,4 +4,8 @@ page-home {
     margin: 9px 8px 9px 0 !important;
   }
 
+  ion-checkbox:checked .strikethrough {
+    text-decoration: line-through !important;
+  }
+
 }
