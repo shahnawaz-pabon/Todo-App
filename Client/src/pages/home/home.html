@@ -9,6 +9,12 @@
 
 <ion-content padding>
 
+  <ion-item *ngFor="let item of todoItems">
+      <ion-checkbox (ionChange)="todoToggle(item)" color="darkblue" item-start></ion-checkbox>
+      <ion-label>{{item.todoTitle}}</ion-label>
+      <ion-icon name="create" item-end></ion-icon>
+  </ion-item>
+
   <ion-fab bottom right>
     <button ion-fab color="darkblue" (click)="openTaskModal()">
       <ion-icon style="font-weight: bold;" name="add"></ion-icon>

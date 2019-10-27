@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, NavParams } from 'ionic-angular';
 
 // import { TaskPage } from '../task/task';
 
@@ -9,7 +9,9 @@ import { NavController, ModalController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public modal: ModalController) {
+  todoItems: any = [];
+
+  constructor(public navCtrl: NavController, public modal: ModalController, public navParams: NavParams) {
 
   }
 
@@ -21,6 +23,15 @@ export class HomePage {
 
     myModal.present();
 
+    myModal.onDidDismiss(data => {
+       console.log(data);
+       this.todoItems.push(data);
+    });
+
+  }
+
+  todoToggle(todoItem){
+    console.log(todoItem);
   }
 
 }

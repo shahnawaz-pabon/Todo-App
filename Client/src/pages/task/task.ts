@@ -1,6 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-
 /**
  * Generated class for the TaskPage page.
  *
@@ -31,7 +30,12 @@ export class TaskPage {
     console.log(todoTitle);
     console.log(todoDescription);
 
-    this.viewCtrl.dismiss();
+    var obj = {
+      todoTitle: todoTitle,
+      todoDescription: todoDescription
+    }
+
+    this.viewCtrl.dismiss(obj);
 
   }
 
