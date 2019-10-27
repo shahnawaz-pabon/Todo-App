@@ -15,12 +15,13 @@ page-task {
   }
   .modal_content {
     display: block;
-    position: relative;
-    top: calc(48%);
-    // left: -15px;
-    // right: 0;
+    position:fixed;
+    top:auto;
+    right:auto;
+    left:auto;
+    bottom:0;
     width: 100%;
-    height: 275px;
+    height: 215px;
     padding: 10px;
     z-index: 1;
     margin: 0 auto;
@@ -68,6 +69,10 @@ page-task {
     width: 100%;
     height: 100%;
     font-size: 2rem;
+  }
+
+  div.scroll-content {
+    padding: 0px !important;
   }
 
 }
