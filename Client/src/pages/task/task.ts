@@ -32,7 +32,8 @@ export class TaskPage {
 
     var obj = {
       todoTitle: todoTitle,
-      todoDescription: todoDescription
+      todoDescription: todoDescription,
+      checked: false
     }
 
     this.viewCtrl.dismiss(obj);
