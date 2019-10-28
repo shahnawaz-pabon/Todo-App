@@ -4,4 +4,19 @@ page-home {
     margin: 9px 8px 9px 0 !important;
   }
 
+  ion-slide.swiper-slide {
+    align-items: flex-start;
+  }
+
+  .segment-label {
+    font-weight: bold;
+    margin-top: -28px;
+    color: white;
+  }
+
+  .segment-icon {
+    margin-top: -10px;
+    color: white;
+  }
+
 }

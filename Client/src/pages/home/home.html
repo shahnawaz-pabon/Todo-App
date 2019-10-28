@@ -1,21 +1,28 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title style="font-weight: bold;">Todo App</ion-title>
   </ion-navbar>
 
-  <ion-toolbar mode="md" color="light">
+  <ion-toolbar color="darkblue">
     <ion-segment #segments [(ngModel)]="page">
         <ion-segment-button value="0"  (click)="selectedTab(0)">
-            My Tasks
+          <ion-icon class="segment-icon" name="list-box"></ion-icon>
+
+          <div class="segment-label">My Tasks</div>
+
         </ion-segment-button>
         <ion-segment-button value="1"  (click)="selectedTab(1)">
-          Statistics
+          <ion-icon  class="segment-icon" name="stats"></ion-icon>
+          <div class="segment-label">Statistics</div>
+
         </ion-segment-button>
         <ion-segment-button value="2"  (click)="selectedTab(2)">
-            Trash
+          <ion-icon  class="segment-icon" name="cloud-done"></ion-icon>
+          <div class="segment-label">Completed</div>
+
         </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -50,7 +57,7 @@
       <h1>Statistics</h1>
     </ion-slide>
     <ion-slide>
-      <h1>Trash</h1>
+      <h1>Completed</h1>
     </ion-slide>
   </ion-slides>
 
