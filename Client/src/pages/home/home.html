@@ -6,7 +6,7 @@
     <ion-title style="font-weight: bold;">Todo App</ion-title>
   </ion-navbar>
 
-  <ion-toolbar color="darkblue">
+  <!-- <ion-toolbar color="darkblue">
     <ion-segment #segments [(ngModel)]="page">
         <ion-segment-button value="0"  (click)="selectedTab(0)">
           <ion-icon class="segment-icon" name="list-box"></ion-icon>
@@ -25,40 +25,14 @@
 
         </ion-segment-button>
     </ion-segment>
-  </ion-toolbar>
+  </ion-toolbar> -->
 
 </ion-header>
 
 <ion-content padding>
 
-  <ion-slides #slider (ionSlideDidChange)="slideChanged()">
-    <ion-slide>
-
-      <ion-item *ngFor="let item of todoItems">
-          <ion-checkbox (ionChange)="todoToggle(item)" [(ngModel)]="item.checked" color="darkblue" item-start></ion-checkbox>
-          <ion-label [style.text-decoration]="item.checked ? 'line-through' : 'none'" (click)="taskDetails(item)">{{item.todoTitle}}</ion-label>
-          <ion-icon name="create" item-end></ion-icon>
-      </ion-item>
-
-      <ion-fab bottom right>
-        <button ion-fab color="darkblue" (click)="openTaskModal()">
-          <ion-icon style="font-weight: bold;" name="add"></ion-icon>
-        </button>
-        <!-- <ion-fab-list side="top">
-          <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-          <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-          <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
-          <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
-        </ion-fab-list> -->
-      </ion-fab>
-
-    </ion-slide>
-    <ion-slide>
-      <h1>Statistics</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Completed</h1>
-    </ion-slide>
-  </ion-slides>
+  <super-tabs tabsPlacement="top"  (tabSelect)="onTabSelect($event)">
+    <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab>
+  </super-tabs>
 
 </ion-content>

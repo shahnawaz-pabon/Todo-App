@@ -1,3 +1,31 @@
 page-list {
 
+  ion-checkbox{
+    margin: 9px 8px 9px 0 !important;
+  }
+
+  .item-cover {
+    display: none;
+  }
+
+  ion-slide.swiper-slide {
+    align-items: flex-start;
+  }
+
+  .segment-label {
+    font-weight: bold;
+    margin-top: -28px;
+    color: white;
+  }
+
+  .segment-icon {
+    margin-top: -10px;
+    color: white;
+  }
+
+  div.scroll-content {
+    padding: 0px !important;
+    margin-top: 40px !important;
+  }
+
 }
