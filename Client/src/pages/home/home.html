@@ -31,7 +31,7 @@
 
 <ion-content padding>
 
-  <super-tabs tabsPlacement="top"  (tabSelect)="onTabSelect($event)">
+  <super-tabs tabsPlacement="top" scrollTabs="true"  (tabSelect)="onTabSelect($event)">
     <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab>
   </super-tabs>
 
