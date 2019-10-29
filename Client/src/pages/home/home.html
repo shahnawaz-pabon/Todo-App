@@ -36,7 +36,7 @@
 
       <ion-item *ngFor="let item of todoItems">
           <ion-checkbox (ionChange)="todoToggle(item)" [(ngModel)]="item.checked" color="darkblue" item-start></ion-checkbox>
-          <ion-label [style.text-decoration]="item.checked ? 'line-through' : 'none'">{{item.todoTitle}}</ion-label>
+          <ion-label [style.text-decoration]="item.checked ? 'line-through' : 'none'" (click)="taskDetails(item)">{{item.todoTitle}}</ion-label>
           <ion-icon name="create" item-end></ion-icon>
       </ion-item>
 

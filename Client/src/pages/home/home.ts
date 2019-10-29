@@ -67,4 +67,11 @@ export class HomePage {
     console.log("this.page",this.page)
   }
 
+  taskDetails(task){
+
+    console.log(task);
+
+    this.navCtrl.push('TaskDetailsPage',{task: task});
+  }
+
 }
