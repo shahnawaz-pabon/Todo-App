@@ -13,9 +13,11 @@ export class ListPage {
 
   todoItems: any = [];
 
+  rootNavCtrl: NavController;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public modal: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
-    // this.selectedItem = navParams.get('item');
+    this.rootNavCtrl = this.navParams.get('rootNavCtrl');
     //
     // // Let's populate this page with some filler content for funzies
     // this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
@@ -61,6 +63,6 @@ export class ListPage {
 
     console.log(task);
 
-    this.navCtrl.push('TaskDetailsPage',{task: task});
+    this.rootNavCtrl.push('TaskDetailsPage',{task: task});
   }
 }

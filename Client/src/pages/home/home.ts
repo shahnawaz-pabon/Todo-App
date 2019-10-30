@@ -3,7 +3,7 @@ import { NavController, ModalController, NavParams, IonicPage } from 'ionic-angu
 
 // import { TaskPage } from '../task/task';
 
-import { SuperTabsComponent } from 'ionic2-super-tabs';
+import { SuperTabs } from 'ionic2-super-tabs';
 
 @IonicPage()
 @Component({
@@ -12,7 +12,7 @@ import { SuperTabsComponent } from 'ionic2-super-tabs';
 })
 export class HomePage {
 
-  @ViewChild(SuperTabsComponent) superTabs: SuperTabsComponent;
+  @ViewChild(SuperTabs) superTabs: SuperTabs;
 
   selectedTabIndex = 0;
 
