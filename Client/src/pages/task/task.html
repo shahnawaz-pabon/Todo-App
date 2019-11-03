@@ -12,6 +12,8 @@
           <ion-input type="text" placeholder="Task Title" id="task-title" [(ngModel)]="todoTitle"></ion-input>
         </div>
 
+        <div class="hr-line"></div>
+
         <div>
           <ion-textarea #todoDes id="todoDes" placeholder="Enter description here..." rows="3" maxLength="500" (keyup)="resize()" [(ngModel)]="todoDescription"></ion-textarea>
         </div>
