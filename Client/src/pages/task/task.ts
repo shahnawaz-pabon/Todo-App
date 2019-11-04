@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class TaskPage {
 
-  @ViewChild('todoDes', { read: ElementRef }) todoDes:ElementRef;
+  // @ViewChild('todoDes', { read: ElementRef }) todoDes:ElementRef;
 
   // @ViewChild('todoDes') todoDes: ElementRef;
 
@@ -41,7 +41,7 @@ export class TaskPage {
   }
 
   resize() {
-      this.todoDes.nativeElement.style.height = this.todoDes.nativeElement.scrollHeight + 'px';
+      // this.todoDes.nativeElement.style.height = this.todoDes.nativeElement.scrollHeight + 'px';
   }
 
 

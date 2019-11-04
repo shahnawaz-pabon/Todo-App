@@ -28,9 +28,9 @@ page-task {
     padding: 10px;
     color: #333;
     background: #e8e8e8;
-    background: -moz-linear-gradient(top, #fff 0%, #e8e8e8 100%);
-    background: -webkit-linear-gradient(top, #fff 0%, #e8e8e8 100%);
-    background: linear-gradient(to bottom, #fff 0%, #e8e8e8 100%);
+    // background: -moz-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+    // background: -webkit-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+    // background: linear-gradient(to bottom, #fff 0%, #e8e8e8 100%);
     border-radius: 5px;
     box-shadow: 0 2px 3px rgba(51, 51, 51, .35);
     box-sizing: border-box;
@@ -71,6 +71,7 @@ page-task {
     border: 0;
     border-radius: 0;
     font-size: 2rem;
+    display: inline;
   }
 
   div.scroll-content {
