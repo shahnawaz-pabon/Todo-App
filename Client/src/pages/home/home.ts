@@ -17,8 +17,8 @@ export class HomePage {
   selectedTabIndex = 0;
 
   pages = [
-    { pageName: 'ListPage', title: 'Task List', icon: 'flame', id: 'listTab'},
-    { pageName: 'StatsPage', title: 'Statistics', icon: 'help-circle', id: 'statsTab'}
+    { pageName: 'ListPage', title: 'Task List', icon: 'list-box', id: 'listTab'},
+    { pageName: 'StatsPage', title: 'Statistics', icon: 'stats', id: 'statsTab'}
   ];
 
   constructor(public navCtrl: NavController, public modal: ModalController, public navParams: NavParams) {

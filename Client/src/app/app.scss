@@ -20,7 +20,8 @@ ion-label {
 }
 
 .activeHighlight {
-  background-color: map-get($colors, lightgrey);
+  background-color: map-get($colors, darkblue);
+  color: white;
 }
 
 ion-card-title {
